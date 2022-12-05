@@ -1,4 +1,5 @@
 from Node import *
+from Callbacks import *
 from sklearn.datasets import load_boston
 from sklearn.preprocessing import StandardScaler
 
@@ -50,12 +51,34 @@ graph = [
     y, Loss
 ]
 
+# callbacks
+red_lr = ReduceLronPlateau(patience=5, min_delta=50, min_lr=0)
+
+ES = EarlyStopping(patience=5, min_delta=45)
+
+def schedule(epoch:int, lr:float):
+    if epoch < 10:
+        return lr
+    else:
+        return lr * np.exp(-1e-12)
+lr_scheduler = LearningRateScheduler(schedule)    
+
 
 # train model
 steps_per_epoch = m // BATCH_SIZE
 history = []
 for epoch in range(EPOCHS):
-    loss = []
+    loss = [forward_pass(Loss, graph)]
+
+    # callbacks call
+    # reduce on plateau
+    LR = red_lr.on_epoch_begin(loss[-1], lr=LR);print(LR)
+    # early stopping
+    if (ES.on_epoch_begin(loss[-1])): break
+    # Learning rate Scheduler
+    LR = lr_scheduler.on_epoch_begin(epoch, LR)
+
+    
     np.random.shuffle(data)
     for step in range(steps_per_epoch):
         x_ = data[step*BATCH_SIZE : (step+1) * BATCH_SIZE, :-1]
@@ -74,6 +97,7 @@ for epoch in range(EPOCHS):
 
     history.append(np.mean(loss))
     print(f"{f'[INFO]: Epoch {epoch + 1}'.ljust(25, '.')}->  MSE: {np.mean(loss) / steps_per_epoch}")
+
 
 # import plotly.graph_objects as go
 
