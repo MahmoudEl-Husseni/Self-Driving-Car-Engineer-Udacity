@@ -19,4 +19,5 @@ I have added some features for deeplearning training (ex. callbacks: EarlyStoppi
 # P3: Traffic Signs Classification: 
 > In this project, I have train a deeplearning model to classify images of traffic signs,<br> I have used LeNet Architecture to build this model,<br> I trained model on 43-classes of traffic signs.
 
-
+# P4: Behavioral Cloning: 
+> In this project, I have collected some labled images of roads and steering angles attached to each posistion using udacity car simulator,<br> I also have trained simple deeplearning model based on AlexNet to predict the suitable angle in each position.
