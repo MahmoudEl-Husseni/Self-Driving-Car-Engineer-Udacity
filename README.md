@@ -21,3 +21,11 @@ I have added some features for deeplearning training (ex. callbacks: EarlyStoppi
 
 # P4: Behavioral Cloning: 
 > In this project, I have collected some labled images of roads and steering angles attached to each posistion using udacity car simulator,<br> I also have trained simple deeplearning model based on AlexNet to predict the suitable angle in each position.
+
+# P5: Image Preprocessing:
+In this task, 
+1. I have calculated ditortion and calibration matrix from chess board images.<br>
+2. I have used these matrices to unditrot distorted images captured using the same camera.<br>
+3. I also have transformed image from a presprective to another to have better view of the image.<br>
+4. I have implemented Sobel operators, magnitude and angle of gradients, thresholding them to get edges.<br>
+5. I have explained some color spaces and difference between them.
