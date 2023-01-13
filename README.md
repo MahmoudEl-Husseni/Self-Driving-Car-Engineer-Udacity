@@ -29,4 +29,3 @@ In this task:
 3. I also have transformed image from a presprective to another to have better view of the image.<br>
 4. I have implemented Sobel operators, magnitude and angle of gradients, thresholding them to get edges.<br>
 5. I have explained some color spaces and difference between them.
-
