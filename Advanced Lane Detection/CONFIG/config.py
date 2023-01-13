@@ -29,7 +29,7 @@ Minv = cv.getPerspectiveTransform(prespective_dst, prespective_src)
 
 # Color Space Parameters
 S_THRESH = 0, 300
-L_LAB_THRESH = 0, 190
+L_LAB_THRESH = 0, 220
 B_LAB_THRESH = 50, 155
 LUV_THRESH = 20, 157 
 

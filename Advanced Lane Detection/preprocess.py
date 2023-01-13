@@ -10,7 +10,7 @@ def plot_images(images, titles=[], gridx=None, gridy=None, figsize=(10, 10)):
     gridy = np.sqrt(n) if gridy is None else gridy
     titles = [''] * n if len(titles)<n else titles
 
-    plt.figure(figsize=figsize)
+    fig = plt.figure(figsize=figsize)
     for i in range(n):
         plt.subplot(gridx, gridy, i+1)
         cmap = 'gray' if images[i].ndim==2 else None
@@ -19,6 +19,7 @@ def plot_images(images, titles=[], gridx=None, gridy=None, figsize=(10, 10)):
         plt.title(titles[i])
     
     plt.show()
+    return fig
 
 def transform_points(pts: np.ndarray, M: np.ndarray):
     '''
@@ -417,16 +418,19 @@ def preprocess_main():
     out_img = draw_lines(test_im, left_fit_o, right_fit_o)
     
     # Plot color spaces results: 
-    plot_images([test_im, warped_im, s, l, b, v, c], 
-                titles=["Original Image", "Warped Image", "S", "L", "B", "V", "Combined"],
-                gridx=2, gridy=4, figsize=(20, 10))
+    fig1 = plot_images( [test_im, warped_im, s, l, b, v, c], 
+                        titles=["Original Image", "Warped Image", "S", "L", "B", "V", "Combined"],
+                        gridx=2, gridy=4, figsize=(20, 10))
 
 
     # Plot the results
-    plot_images([test_im, windowing_result, windowing_out_img, result, out_img],
-                ["Original image", "Windowing out image_warped", "Windowing out image_original",
-                    "Lines with Prepspective Transformation", "Original image with fitted lines", " "],
-                gridx=2, gridy=3, figsize=(20, 10))
+    fig2 = plot_images( [test_im, windowing_result, windowing_out_img, result, out_img],
+                        ["Original image", "Windowing out image_warped", "Windowing out image_original",
+                        "Lines with Prepspective Transformation", "Original image with fitted lines", " "],
+                        gridx=2, gridy=3, figsize=(20, 10))
+    
+    fig1.savefig('output_images/color_spaces.png')
+    fig2.savefig('output_images/line_detection.png')
 
 
 if __name__ == "__main__":

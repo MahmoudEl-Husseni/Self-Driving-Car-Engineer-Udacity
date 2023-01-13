@@ -1,0 +1,20 @@
+1. convert from BGR to RGB.
+
+L from LUV is a competitive candidate.
+S from HLS is a competitive candidate.
+
+test1: HLS -> S   | LUV -> V        | LAB -> B
+test2: HLS -> S   | LUV -> (L, V)   | LAB -> (L, B)
+
+Notes: 
+1. blue ground -> better L in LUV, LAB.
+2. B in LAB is more accurate than V in LUV.
+3. Its important to first convert image from BGR to RGB.
+==============================================
+Conclusion: 
+its better to use: Staturation from HLS, 
+                    V from LUV,
+                    B from LAB.
+
+Apply prespective transform to combined image.
+Apply sobel operators.
