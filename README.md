@@ -29,3 +29,10 @@ In this task:
 3. I also have transformed image from a presprective to another to have better view of the image.<br>
 4. I have implemented Sobel operators, magnitude and angle of gradients, thresholding them to get edges.<br>
 5. I have explained some color spaces and difference between them.
+
+# P6: Advanced Lane Detection: 
+> In this project, I have build a pipeline that takes an image and: 
+1. unditort image.
+2. warp image to focus only on lane lines in road.
+3. combine multiple color channels together and threshold them tot isolate lane lines only in foreground.
+4. build an algorithm to detect lines from this binary thresholded image.
