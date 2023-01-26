@@ -1,9 +1,21 @@
 # Self-Driving-Car-Engineer-Udacity
 Projects of Self-Driving Car Engineer Specialization from udacity
 
+[P1: Line Detection](#P1)<br>
+[P2: MiniFlow](#P2)<br>
+[P3: Traffic Signs Classification](#P3)<br>
+[P4: Behavioral Cloning](#P4)<br>
+[P5: Image Preprocessing](#P5)<br>
+[P6: Advanced Lane Detection](#P6)<br>
+[P7: Machine Learning Algorithms](#P7)<br>
+[P8: Vehicle detection using traditional computer vision](#P8)<br>
+
+
+<a id='P1'></a>
 # P1: Line Detection:-
 > In this model I have used traditional computer vision techniques (Color Thresholding, Canny edge detection, Hough Transform) to detect lane lines in roads.
 
+<a id='P2'></a>
 # P2: MiniFlow:-
 > In this project, I have designed simple computational graph module from scratch which can be used in deep learning projects
 
@@ -16,13 +28,16 @@ each graph can have one of 6 types of Nodes:
 6. MSE    (Calculate mean square error between tow vectors).
 I have added some features for deeplearning training (ex. callbacks: EarlyStopping, ReduceLronPlateau, LearningRateScheduler)
 
-# P3: Traffic Signs Classification: 
+<a id='P3'></a>
+# P3: Traffic Signs Classification:-
 > In this project, I have train a deeplearning model to classify images of traffic signs,<br> I have used LeNet Architecture to build this model,<br> I trained model on 43-classes of traffic signs.
 
-# P4: Behavioral Cloning: 
+<a id='P4'></a>
+# P4: Behavioral Cloning:-
 > In this project, I have collected some labled images of roads and steering angles attached to each posistion using udacity car simulator,<br> I also have trained simple deeplearning model based on AlexNet to predict the suitable angle in each position.
 
-# P5: Image Preprocessing:
+<a id='P5'></a>
+# P5: Image Preprocessing:-
 In this task:
 1. I have calculated ditortion and calibration matrix from chess board images.<br>
 2. I have used these matrices to unditrot distorted images captured using the same camera.<br>
@@ -30,7 +45,8 @@ In this task:
 4. I have implemented Sobel operators, magnitude and angle of gradients, thresholding them to get edges.<br>
 5. I have explained some color spaces and difference between them.
 
-# P6: Advanced Lane Detection: 
+<a id='P6'></a>
+# P6: Advanced Lane Detection:-
 In this project, I have build a pipeline that takes an image and: 
 1. undistort image.
 2. warp image to focus only on lane lines in road.
@@ -42,12 +58,26 @@ In this project, I have build a pipeline that takes an image and:
 <img src="https://i.ibb.co/vmckJqj/color-spaces.png" alt="Color Spaces" style="width:100%">
 <img src="https://i.ibb.co/JzLjZ1W/line-detection.png" alt="Line detection" style="width:100%">
 
-
 7. test algorithm on recorded **video**.
 
+<a id='P7'></a>
 # P7: Machine Learning Algorithms: 
 In this task: 
 1. I have build some machine learning algorithms **Decision Tree, Gaussian Naive Bayes** from scratch.<br> 
 2. I have trained these algorithms on randomly generated data, comparing them with scikit-learn **SVC** algorithm.
 
 <img src="https://i.ibb.co/kmxt2Cs/machine-learning-algos.png" alt="Naive Bayes - SVM - Decision Tree" style="width:100%">
+
+
+<a id='P8'></a>
+# P8: Vehicle detection using traditional computer vision:-
+In this project: 
+1. I have used traditional computer vision techniques to extract features from images:<br>
+  ```Features:```<br>
+  a. Color-based features (Histogram of Colors of pixels, color of pixel itself).<br>
+  b. Edges-based features (HOG: Histogram of Gradients).<br>
+  
+2. I have used these extracted features to train a support vector machine classifier model to classify whether image contains car or not.
+3. I passed window over the entire Region of Interest in frame to find cars in images with different scales.
+
+<a align="center"><img src="https://i.ibb.co/wzJTGcz/car-detection.png" alt="car-detection" border="0"></a>
