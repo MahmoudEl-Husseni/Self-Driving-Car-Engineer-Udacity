@@ -9,6 +9,7 @@ Projects of Self-Driving Car Engineer Specialization from udacity
 [P6: Advanced Lane Detection](#P6)<br>
 [P7: Machine Learning Algorithms](#P7)<br>
 [P8: Vehicle Detection using traditional computer vision](#P8)<br>
+[P9: Sensor Fusion Using extended kalman filter](#P9)<br>
 
 
 <a id='P1'></a>
@@ -78,3 +79,14 @@ In this Project:
 2. I used these features to train a support vector machine model to classisfy whether image contains car.
 3. I passed a window over image to classify each part of image to find cars in different locations and scales.
 <a><img src="https://i.ibb.co/wzJTGcz/car-detection.png" alt="car-detection" border="0"></a>
+
+<a id='P9'></a>
+# P9: Sensor Fusion Using extended kalman filter:-  
+In this Task: 
+1. I have designed kalman filter in both  ```C++``` and ```python``` to predict the correct posistion and velocity of objects and pedestrians in road, kalman filter takes his input from two different sources: 
+    1. **Lidar** sensor that calculates posisition of object in both x, y directions.
+    2. **Radar** sensor that calculates: <br>
+            a) Rho: $\rho$,<br>
+            b) theta: $\theta$,<br>
+            c) Rho_dot: $\rho^*$.<br>
+2. I used extended Kalman filter to trasform radar readings to cartesian coordinates whera locations are: $x$, $y$ and velocity: $v_x, v_y$.

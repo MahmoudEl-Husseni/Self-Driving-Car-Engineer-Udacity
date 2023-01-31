@@ -1,0 +1,60 @@
+#ifndef KALMAN_FILTER_H_
+#define KALMAN_FILTER_H_
+#include <eigen3/Eigen/Dense>
+
+using Eigen::MatrixXd;
+using Eigen::VectorXd;
+
+class KalmanFilter {
+public:
+
+	///* state vector
+	VectorXd x_;
+
+	///* state covariance matrix
+	MatrixXd P_;
+
+	///* state transistion matrix
+	MatrixXd F_;
+
+	///* process covariance matrix
+	MatrixXd Q_;
+
+	///* measurement matrix
+	MatrixXd H_laser_;
+	MatrixXd Hj_;
+
+	///* measurement covariance matrix
+	MatrixXd R_laser_;
+	MatrixXd R_radar_;
+
+	// Sensor type
+	char sensor_type;
+
+	/**
+	 * Constructor
+	 */
+	KalmanFilter();
+
+	/**
+	 * Destructor
+	 */
+	virtual ~KalmanFilter();
+
+	/**
+	 * Predict Predicts the state and the state covariance
+	 * using the process model
+	 */
+	void Predict();
+
+	/**
+	 * Updates the state and
+	 * @param z The measurement at k+1
+	 */
+	void Update_laser(const VectorXd &z);
+
+	void Update_radar(const VectorXd &z);
+
+};
+
+#endif /* KALMAN_FILTER_H_ */
