@@ -58,7 +58,8 @@ In this project, I have build a pipeline that takes an image and:
 
 <img src="https://i.ibb.co/vmckJqj/color-spaces.png" alt="Color Spaces" style="width:100%">
 <img src="https://i.ibb.co/JzLjZ1W/line-detection.png" alt="Line detection" style="width:100%">
-7. test algorithm on recorded **video**.
+
+7. test algorithm on recorded **video** .
 
 <a id='P7'></a>
 # P7: Machine Learning Algorithms: 
@@ -90,3 +91,4 @@ In this Task:
             b) theta: $\theta$,<br>
             c) Rho_dot: $\rho^*$.<br>
 2. I used extended Kalman filter to trasform radar readings to cartesian coordinates whera locations are: $x$, $y$ and velocity: $v_x, v_y$.
+
