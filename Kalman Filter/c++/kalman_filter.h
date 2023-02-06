@@ -27,9 +27,7 @@ public:
 	///* measurement covariance matrix
 	MatrixXd R_laser_;
 	MatrixXd R_radar_;
-
-	// Sensor type
-	char sensor_type;
+	
 
 	/**
 	 * Constructor
