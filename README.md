@@ -10,6 +10,8 @@ Projects of Self-Driving Car Engineer Specialization from udacity
 [P7: Machine Learning Algorithms](#P7)<br>
 [P8: Vehicle Detection using traditional computer vision](#P8)<br>
 [P9: Sensor Fusion Using extended kalman filter](#P9)<br>
+[P10: Localization](#P10)<br>
+[P11: PID Controller](#P11)<br>
 
 
 <a id='P1'></a>
@@ -67,7 +69,7 @@ In this task:
 1. I have build some machine learning algorithms **Decision Tree, Gaussian Naive Bayes** from scratch.<br> 
 2. I have trained these algorithms on randomly generated data, comparing them with scikit-learn **SVC** algorithm.
 
-<img src="https://i.ibb.co/kmxt2Cs/machine-learning-algos.png" alt="Naive Bayes - SVM - Decision Tree" style="width:100%">
+<img src="https://i.postimg.cc/NFQ7H91b/machine-learning-algos.png" alt="Naive Bayes - SVM - Decision Tree" style="width:100%">
 
 
 <a id='P8'></a>
@@ -91,4 +93,15 @@ In this Task:
             b) theta: $\theta$,<br>
             c) Rho_dot: $\rho^*$.<br>
 2. I used extended Kalman filter to trasform radar readings to cartesian coordinates whera locations are: $x$, $y$ and velocity: $v_x, v_y$.
+
+
+<a id='P10'></a>
+# P10: Localization:-  
+In this Task: 
+1. I have implemented a 1D map realization of **Markov Localization Filter** in C++.
+
+<a id='P11'></a>
+# P11: PID Controller:-  
+In this Task: 
+1. I created a ```.ipynb``` notebook, where I have explained PID controller and the importance of each component (Proportional-Intergral-Derivative) and compared between each of this component with graphs.
 
